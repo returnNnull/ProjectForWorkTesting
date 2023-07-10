@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/webViewFragment">
+
+    <fragment
+        android:id="@+id/internetErrorFragment"
+        android:name="com.example.projectforworktesting.InternetErrorFragment"
+        android:label="fragment_internet_error"
+        tools:layout="@layout/fragment_internet_error" />
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="com.example.projectforworktesting.webview.WebViewFragment"
+        android:label="fragment_web_view"
+        tools:layout="@layout/fragment_web_view" >
+        <action
+            android:id="@+id/action_webViewFragment_to_internetErrorFragment"
+            app:destination="@id/internetErrorFragment"
+            app:launchSingleTop="true" />
+        <action
+            android:id="@+id/action_webViewFragment_to_mockViewFragment"
+            app:destination="@id/mockViewFragment"
+            app:launchSingleTop="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/mockViewFragment"
+        android:name="com.example.projectforworktesting.mock.ui.MockViewFragment"
+        android:label="fragment_mock_view"
+        tools:layout="@layout/fragment_mock_view" />
+</navigation>
