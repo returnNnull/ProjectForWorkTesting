@@ -28,5 +28,22 @@
         android:id="@+id/mockViewFragment"
         android:name="com.example.projectforworktesting.mock.ui.MockViewFragment"
         android:label="fragment_mock_view"
-        tools:layout="@layout/fragment_mock_view" />
+        tools:layout="@layout/fragment_mock_view" >
+        <action
+            android:id="@+id/action_mockViewFragment_to_mockInfoViewFragment"
+            app:destination="@id/mockInfoViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mockInfoViewFragment"
+        android:name="com.example.projectforworktesting.mock.ui.MockInfoViewFragment"
+        android:label="MockInfoViewFragment" >
+        <argument
+            android:name="ID"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_mockInfoViewFragment_to_mockViewFragment"
+            app:destination="@id/mockViewFragment"
+            app:popUpTo="@id/mockViewFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>

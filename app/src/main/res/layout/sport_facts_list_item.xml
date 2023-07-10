@@ -5,14 +5,15 @@
 
     <data>
         <variable
-            name="category"
-            type="com.example.projectforworktesting.mock.data.room.SportCategoryData" />
+            name="fact"
+            type="com.example.projectforworktesting.mock.data.room.SportFactData" />
 
     </data>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="300dp"
+        android:layout_margin="8dp"
         app:cardCornerRadius="8dp">
 
         <LinearLayout
@@ -25,7 +26,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:scaleType="centerCrop"
-                app:imgUri="@{category.img}"
+                app:imgUri="@{fact.img}"
                 app:placeholder="@{@drawable/bg_placeholder}"
                 app:error="@{@drawable/baseline_broken_image_24}"
                 tools:srcCompat="@tools:sample/avatars" />
@@ -36,14 +37,7 @@
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:layout_margin="8dp"
-                android:text="@{category.tittle}" />
-
-            <TextView
-                android:id="@+id/about"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:text="@{category.about}"/>
+                android:text="@{fact.tittle}" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

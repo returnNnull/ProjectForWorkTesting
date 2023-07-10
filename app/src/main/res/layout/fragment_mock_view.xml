@@ -13,6 +13,6 @@
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:spanCount="2"
-        tools:listitem="@layout/sport_category_list_item"/>
+        tools:listitem="@layout/sport_facts_list_item"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
